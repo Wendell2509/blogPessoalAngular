@@ -1,4 +1,3 @@
-import { ɵExtraLocaleDataIndex } from "@angular/core";
 import { Postagem } from "./Postagem";
 
 export class User{

@@ -18,6 +18,7 @@ export class TemaDeleteComponent implements OnInit {
     private temaService: TemaService,
     private router: Router,
     private route: ActivatedRoute,
+    
   ) { }
 
   ngOnInit() {
@@ -26,6 +27,8 @@ export class TemaDeleteComponent implements OnInit {
       alert('sua seção expirou,faça o login novamente!')
       this.router.navigate(['/entrar'])
     }
+    //REFRESH NO TOKEN
+    this.temaService.refreshToken()
 
     this.idTema = this.route.snapshot.params['id']
     this.findByIdTema(this.idTema)

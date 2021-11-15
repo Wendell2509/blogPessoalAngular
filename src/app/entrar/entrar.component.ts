@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { UserLogin } from '../model/UserLogin';
 import { AuthService } from '../service/auth.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-entrar',
@@ -29,12 +30,10 @@ export class EntrarComponent implements OnInit {
       environment.token = this.userLogin.token
       environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
-      environment.id = this.userLogin.usuarioId
+      environment.id = this.userLogin.usuarioID
 
       console.log(environment.token)
-      console.log(environment.nome)
-      console.log(environment.foto)
-      console.log(environment.id)
+      console.log(this.userLogin.token)
 
       this.router.navigate(["/inicio"])
     }, erro=>{

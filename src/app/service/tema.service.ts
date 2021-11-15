@@ -25,7 +25,7 @@ export class TemaService {
 
   //RECEBE TODOS OS TEMAS
   getAllTema(): Observable<Tema[]>{
-    return this.http.get<Tema[]>('https://blogpessoalwendellfranco.herokuapp.com/temas/all',this.token)
+    return this.http.get<Tema[]>("https://blogpessoalwendellfranco.herokuapp.com/temas/all",this.token)
   }
 
   getByIdTema(id: number):Observable<Tema>{
@@ -34,12 +34,12 @@ export class TemaService {
 
   //CRIA UM NOVO TEMA
   postTema(tema: Tema): Observable<Tema>{
-    return this.http.post<Tema>('https://blogpessoalwendellfranco.herokuapp.com/temas/save',tema,this.token)
+    return this.http.post<Tema>("https://blogpessoalwendellfranco.herokuapp.com/temas/save",tema,this.token)
   }
 
   //ATUALIZA O NOME DE UM TEMA
   putTema(tema: Tema): Observable<Tema>{
-    return this.http.put<Tema>('https://blogpessoalwendellfranco.herokuapp.com/temas/update',tema,this.token)
+    return this.http.put<Tema>("https://blogpessoalwendellfranco.herokuapp.com/temas/update",tema,this.token)
   }
 
   //DELETA UM TEMA E TODOS AS POSTAGENS DEPENDENTES DESSE TEMA
